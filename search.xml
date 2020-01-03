@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试阿里云oss图床数据</title>
+    <url>/2020/01/03/%E6%B5%8B%E8%AF%95%E9%98%BF%E9%87%8C%E4%BA%91oss%E5%9B%BE%E5%BA%8A%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://zhujianjun.oss-cn-chengdu.aliyuncs.com/2019/12/19/eb3781219094223.png" alt="Alt text" title="optional">
+                </div>
+                <div class="image-caption">optional</div>
+            </figure>]]></content>
+  </entry>
+  <entry>
     <title>测试url图片</title>
     <url>/2020/01/03/%E6%B5%8B%E8%AF%95url%E5%9B%BE%E7%89%87/</url>
     <content><![CDATA[<figure class="image-bubble">
