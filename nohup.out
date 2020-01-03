@@ -1,0 +1,23 @@
+INFO  Start processing
+INFO  Hexo is running at http://localhost:3000 . Press Ctrl+C to stop.
+(node:4661) [DEP0066] DeprecationWarning: OutgoingMessage.prototype._headers is deprecated
+res Error: spawn ./hexo-publish.sh ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:264:19)
+    at onErrorNT (internal/child_process.js:456:16)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  errno: 'ENOENT',
+  code: 'ENOENT',
+  syscall: 'spawn ./hexo-publish.sh',
+  path: './hexo-publish.sh',
+  spawnargs: [ '' ]
+} { stdout: '', stderr: '' }
+res Error: spawn ./hexo-publish.sh ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:264:19)
+    at onErrorNT (internal/child_process.js:456:16)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  errno: 'ENOENT',
+  code: 'ENOENT',
+  syscall: 'spawn ./hexo-publish.sh',
+  path: './hexo-publish.sh',
+  spawnargs: [ '' ]
+} { stdout: '', stderr: '' }

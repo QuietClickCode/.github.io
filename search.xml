@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试url图片</title>
+    <url>/2020/01/03/%E6%B5%8B%E8%AF%95url%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://file02.16sucai.com/d/file/2014/0704/e53c868ee9e8e7b28c424b56afe2066d.jpg" alt="Alt text" title="optional">
+                </div>
+                <div class="image-caption">optional</div>
+            </figure>]]></content>
+  </entry>
+  <entry>
+    <title>测试本地图片</title>
+    <url>/2020/01/03/%E6%B5%8B%E8%AF%95%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/pasted-0.png" alt="upload successful" title="">
+                </div>
+                <div class="image-caption">upload successful</div>
+            </figure>]]></content>
+  </entry>
+  <entry>
     <title>hexo-admin插件</title>
     <url>/2020/01/03/hexo-admin%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<p><strong>测试用hexo-admin写插件</strong></p>
