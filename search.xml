@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试tag和category</title>
+    <url>/2020/01/06/%E6%B5%8B%E8%AF%95tag%E5%92%8Ccategory/</url>
+    <content><![CDATA[<hr>
+<p>title: first-blog<br>date: 2019-12-23 21:44:50<br>tags: tech<br>categories: java</p>
+<hr>
+<p>测试tags和</p>
+]]></content>
+      <categories>
+        <category>想法</category>
+        <category>兴趣</category>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>片段</tag>
+        <tag>灵感</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>图片与文字的结合想法</title>
     <url>/2020/01/06/%E5%9B%BE%E7%89%87%E4%B8%8E%E6%96%87%E5%AD%97%E7%9A%84%E7%BB%93%E5%90%88%E6%83%B3%E6%B3%95/</url>
     <content><![CDATA[<p><img src="https://zhujianjun.oss-cn-chengdu.aliyuncs.com/2020/01/06/978de0106080929.jpg" alt="oss图片"></p>
