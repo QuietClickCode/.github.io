@@ -4,7 +4,13 @@
     <title>图片与文字的结合想法</title>
     <url>/2020/01/06/%E5%9B%BE%E7%89%87%E4%B8%8E%E6%96%87%E5%AD%97%E7%9A%84%E7%BB%93%E5%90%88%E6%83%B3%E6%B3%95/</url>
     <content><![CDATA[<p><img src="https://zhujianjun.oss-cn-chengdu.aliyuncs.com/2020/01/06/978de0106080929.jpg" alt="oss图片"></p>
-]]></content>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://zhujianjun.oss-cn-chengdu.aliyuncs.com/2020/01/06/fee860106081358.jpg" alt="Alt text" title="鼠标悬浮文字">
+                </div>
+                <div class="image-caption">鼠标悬浮文字</div>
+            </figure>]]></content>
   </entry>
   <entry>
     <title>关于AISearch搜索引擎的想法</title>
