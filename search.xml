@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于AISearch搜索引擎的想法</title>
+    <url>/2020/01/06/%E5%85%B3%E4%BA%8EAISearch%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%9A%84%E6%83%B3%E6%B3%95/</url>
+    <content><![CDATA[<ol>
+<li>第一步实现自己的文件搜索系统:通过指定接口上传,到服务器,文件的<br>各种元信息通过tika提取出来,内容也提取出来,分类,音频,视频,图片,文字,<br>然后,音频,视频,转为音频在语音识别为文字,图片通过ocr识别为文字,就可以全文检索了,同时支持分类搜索</li>
+<li>对已有的文件,通过fscrwaler+tika爬取信息,同上</li>
+<li>对于动态的日志文件什么的 事件文件什么的,通过elk + filebeat+一系列搜集工具实现导入es</li>
+<li>全文检索参考ambar,<a href="https://ambar.cloud/,fscrawer的实现,tika的实现" target="_blank" rel="noopener">https://ambar.cloud/,fscrawer的实现,tika的实现</a></li>
+<li>后期数据量大了,肯定要上hadoop+es,es+tika,spring cloud,后期肯定要上,flutter,</li>
+<li>多终端,微信小程序,pc,web,安卓,ios,linux,mac</li>
+<li>生态,博客,论坛,社区,都搞起来,社群,聊天</li>
+<li>人工智能,推荐,深度学习</li>
+<li>追求效率,c++</li>
+<li>架构,设计模式,算法,集大成</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>测试阿里云oss图床数据</title>
     <url>/2020/01/03/%E6%B5%8B%E8%AF%95%E9%98%BF%E9%87%8C%E4%BA%91oss%E5%9B%BE%E5%BA%8A%E6%95%B0%E6%8D%AE/</url>
     <content><![CDATA[<figure class="image-bubble">
