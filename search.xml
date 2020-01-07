@@ -16,7 +16,14 @@
 <p>关于代码,确实写得稀烂,没有一点美感,bug多多,但是先要实现功能把正常流程跑通,后期再来重构</p>
 </li>
 </ol>
+<p>正常的上传文件索引完成了用tika,考虑用fscrawler+es,完成对磁盘的索引,<br>后面考虑爬虫+es,通用的搜索引擎</p>
+<p>中途改一改开源项目,作为己用</p>
+<p> flutter+spirng cloud+hadoop相关技术栈</p>
+<p> 几个主要产品,内容分享,存储,搜索,社交,论坛,社区,博客,通信,电商,爬虫,工具和资源合集,是不是挺有野心 的,O(∩_∩)O哈哈~</p>
 ]]></content>
+      <categories>
+        <category>规划</category>
+      </categories>
       <tags>
         <tag>搜索引擎</tag>
       </tags>
