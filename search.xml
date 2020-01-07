@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于接下来要做的...</title>
+    <url>/2020/01/08/%E5%85%B3%E4%BA%8E%E6%8E%A5%E4%B8%8B%E6%9D%A5%E8%A6%81%E5%81%9A%E7%9A%84/</url>
+    <content><![CDATA[<ol>
+<li><p>上传txt直接写入数据库并同步到索引库 完成</p>
+</li>
+<li><p>指定ID删除文档 完成</p>
+</li>
+<li><p>关键字查询文档 完成</p>
+</li>
+<li><p>展示搜索结果 完成</p>
+<p> 上传txt不够啊,还要支持doc,xls,pdf,mp3,mp4</p>
+<p>展示规范美观一点吧,删除搜出来删,关键字查询,还要时间查询什么的,s搜索结果高亮还要打分什么的</p>
+<p>关于代码,确实写得稀烂,没有一点美感,bug多多,但是先要实现功能把正常流程跑通,后期再来重构</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>搜索引擎</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>elasticsearch学习</title>
     <url>/2020/01/07/elasticsearch%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p>JestClient来操作es</p>
