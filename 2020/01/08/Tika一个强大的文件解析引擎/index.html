@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Tika一个强大的文件解析引擎 | Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="参考教程:https:&#x2F;&#x2F;www.yiibai.com&#x2F;tika  Apache Tika 是什么? Apache Tika用于文件类型检测和从各种格式的文件内容提取的库。 在内部，Tika使用现有的各种文件解析器和文档类型的检测技术来检测和提取数据。    使用Tika，人们可以开发出通用型检测器和内容提取到的不同类型的文件，如电子表格，文本文件，图像，PDF文件甚至多媒体输入格式，在一定程度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tika一个强大的文件解析引擎">
+<meta property="og:url" content="https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="参考教程:https:&#x2F;&#x2F;www.yiibai.com&#x2F;tika  Apache Tika 是什么? Apache Tika用于文件类型检测和从各种格式的文件内容提取的库。 在内部，Tika使用现有的各种文件解析器和文档类型的检测技术来检测和提取数据。    使用Tika，人们可以开发出通用型检测器和内容提取到的不同类型的文件，如电子表格，文本文件，图像，PDF文件甚至多媒体输入格式，在一定程度">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-08T02:07:41.000Z">
+<meta property="article:modified_time" content="2020-01-08T02:52:03.335Z">
+<meta property="article:author" content="ZhuJianJun">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">ZhuJianJun</h5>
+          <a href="mailto:228602890@qq.com" title="228602890@qq.com" class="mail">228602890@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/QuietClickCode" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/zhujianjunYUN" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                码云
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.myznsh.com:8081" target="_blank" rel="noopener"  >
+                <i class="icon icon-lg icon-link"></i>
+                AISearch
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Tika一个强大的文件解析引擎</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Tika一个强大的文件解析引擎</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-01-08T02:07:41.000Z" itemprop="datePublished" class="page-time">
+  2020-01-08
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-Tika一个强大的文件解析引擎"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Tika一个强大的文件解析引擎</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-01-08 10:07:41" datetime="2020-01-08T02:07:41.000Z"  itemprop="datePublished">2020-01-08</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <blockquote>
+<p>参考教程:<a href="https://www.yiibai.com/tika" target="_blank" rel="noopener">https://www.yiibai.com/tika</a></p>
+</blockquote>
+<p>Apache Tika 是什么?</p>
+<p>Apache Tika用于文件类型检测和从各种格式的文件内容提取的库。</p>
+<pre><code>在内部，Tika使用现有的各种文件解析器和文档类型的检测技术来检测和提取数据。
+
+
+
+使用Tika，人们可以开发出通用型检测器和内容提取到的不同类型的文件，如电子表格，文本文件，图像，PDF文件甚至多媒体输入格式，在一定程度上提取结构化文本以及元数据。
+
+
+
+Tika提供用于解析不同文件格式的一个通用API。它采用83个现有的专业解析器库，为每个文档类型。
+
+
+
+所有这些解析器库是根据一个叫做Parser接口单一接口封装。</code></pre><p>为什么用Tika?</p>
+<p>据filext.com网站统计，大约有1.5万至51K的内容类型，并且这个数字还在与日俱增。数据被存储在不同的格式，如文本文档，excel表格，PDF，图像和多媒体文件，仅举几例。因此，应用程序如搜索引擎和内容管理系统需要从这些文档类型容易提取数据的额外的支持。Apache Tika 通过提供一个通用的API来检测并提取多种文件格式的数据服务达到这一目的。</p>
+<p>Apache Tika 应用</p>
+<p>有各种各样的应用程序使用Apache Tika。在这里，我们将讨论严重依赖Apache Tika几个突出的应用。</p>
+<p>搜索引擎</p>
+<pre><code>开发搜索引擎索引的数字文档的文本内容使Tika被广泛使用。
+
+
+
+        搜索引擎是用于搜索的网页信息和索引文件的信息处理系统。
+
+
+
+        抓取工具是通过Web抓取获取使用一些索引技术被索引的文件搜索引擎的重要组成部分。此后，抓取工具传送这些索引文件提取成分。
+
+
+
+        提取成分的职责是提取文档中的文本和元数据。这样提取的内容和元数据是对搜索引擎非常有用。该提取组件包含在Tika中。
+
+
+
+        然后将提取的内容被传递到使用它来建立一个搜索索引搜索引擎的索引器。此外，该搜索引擎使用许多其它方式提取的内容也是如此。</code></pre><p>文档分析</p>
+<pre><code>在人工智能领域，有一定的工具来自动分析文件在语义层面，并提取各种数据来自他们。
+
+
+
+在这种应用中，这些文件是基于在文档的所提取的内容的突出方面进行分类。
+
+
+
+这些工具使用提Tika内容提取分析从纯文本到不同的数字文档文件。</code></pre><p>数字资产管理</p>
+<pre><code>        有些组织管理他们的数字资产，如使用一种称为数字资产管理（DAM）的特殊应用程序的照片，电子书，绘图，音乐和视频。
+
+
+
+        这样的应用程序采取的文件类型检测器和元数据提取器的帮助下到的各种文件进行分类。
+
+
+
+内容分析
+
+
+
+        像亚马逊网站建议根据自己的兴趣刚刚发布了他们的网站内容向个人用户。要做到这一点，这些网站遵循机器学习技术，或采取了类似Facebook的社交媒体网站的帮助下，以提取所需的信息，如喜欢和用户的利益。此收集到的信息将在HTML标签或其他格式需要另外的内容类型检测和提取的形式。
+
+
+
+        为一个文件，内容分析，我们有实现，如UIMA和Mahout的机器学习技术的技术。这些技术是在聚类和分析中的文件中的数据是有用的。
+
+
+
+        Apache Mahout是一个框架，它提供基于Apache Hadoop的ML算法- 一个云计算平台。 Mahout 提供了下面的某个集群和过滤技术的架构。按照这个架构，程序员可以编写自己的ML算法，通过采取各种文本和元数据的组合来产生建议。提供输入这些算法，最近Mahout的版本使用Tika提取二进制内容的文本和元数据。
+
+
+
+        Apache UIMA 分析和处理各种编程语言，并产生UIMA注解。在内部，它使用提卡注解者抽取文档中的文本和元数据。</code></pre><p>一言以蔽之,搜索引擎和数据分析会用到它</p>
+<p>作者：<br>                        jack张<br>                    Java技术QQ群：227270512 / Linux QQ群：479429477</p>
+<pre><code>                    ( adsbygoogle = window.adsbygoogle || []).push({});
+
+
+
+
+
+
+
+
+
+
+
+Tika应用层架构
+
+应用程序员可以很容易地在他们的应用程序集成Tika。Tika提供了一个命令行界面和图形用户界面，使它比较人性化。
+
+在本章中，我们将讨论构成Tika架构的四个重要模块。下图显示了Tika的四个模块的体系结构：
+
+
+    语言检测机制。
+
+    MIME检测机制。
+
+    Parser接口。
+
+    Tika Facade 类.</code></pre><p>语言检测机制</p>
+<pre><code>每当一个文本文件被传递到Tika，它将检测在其中的语言。它接受没有语言的注释文件和通过检测该语言添加在该文件的元数据信息。
+
+支持语言识别，Tika 有一类叫做语言标识符在包org.apache.tika.language及语言识别资料库里面包含了语言检测从给定文本的算法。Tika 内部使用N-gram算法语言检测。</code></pre><p>MIME检测机制</p>
+<pre><code>Tika可以根据MIME标准检测文档类型。Tika默认MIME类型检测是使用org.apache.tika.mime.mimeTypes。它使用org.apache.tika.detect.Detector 接口大部分内容类型检测。
+
+内部Tika使用多种技术，如文件匹配替换，内容类型提示，魔术字节，字符编码，以及其他一些技术。</code></pre><p>解析器接口</p>
+<pre><code>org.apache.tika.parser 解析器接口是Tika解析文档的主要接口。该接口从提取文档中的文本和元数据，并总结了其对外部用户愿意写解析器插件。
+
+采用不同的具体解析器类，具体为各个文档类型，Tika 支持大量的文件格式。这些格式的具体类不同的文件格式提供支持，无论是通过直接实现逻辑分析器或使用外部解析器库。</code></pre><p>Tika Facade 类</p>
+<pre><code>使用的Tika facade类是从Java调用Tika的最简单和直接的方式，而且也沿用了外观的设计模式。可以在 Tika API的org.apache.tika包Tika 找到外观facade类。
+
+通过实现基本用例，Tika作为facade的代理。它抽象了的Tika库的底层复杂性，例如MIME检测机制，解析器接口和语言检测机制，并提供给用户一个简单的接口来使用。</code></pre><p>Tika的特点</p>
+<pre><code>统一解析器接口：Tika封装在一个单一的解析器接口的第三方解析器库。由于这个特征，用户逸出从选择合适的解析器库的负担，并使用它，根据所遇到的文件类型。
+
+
+
+低内存占用：Tika因此消耗更少的内存资源也很容易嵌入Java应用程序。也可以用Tika平台像移动那样PDA资源少，运行该应用程序。
+
+
+
+快速处理：从应用连结内容检测和提取可以预期的。
+
+
+
+灵活元数据：Tika理解所有这些都用来描述文件的元数据模型。
+
+
+
+解析器集成：Tika可以使用可在单一应用程序中每个文件类型的各种解析器库。
+
+
+
+MIME类型检测： Tika可以检测并从所有包括在MIME标准的媒体类型中提取内容。
+
+
+
+语言检测： Tika包括语言识别功能，因此可以在一个多语种网站基于语言类型的文档中使用</code></pre><p>Tika的功能</p>
+<pre><code>Tika支持多种功能：
+
+
+    文档类型检测
+
+    内容提取
+
+    元数据提取
+
+    语言检测</code></pre>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-01-08T02:52:03.335Z" itemprop="dateUpdated">2020-01-08 10:52:03</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/" target="_blank" rel="external">https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://quietclickcode.github.io">
+            <img src="/img/avatar.jpg" alt="ZhuJianJun">
+            ZhuJianJun
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/&title=《Tika一个强大的文件解析引擎》 — Hexo&pic=https://quietclickcode.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/&title=《Tika一个强大的文件解析引擎》 — Hexo&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Tika一个强大的文件解析引擎》 — Hexo&url=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/&via=https://quietclickcode.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/01/08/%E6%B5%8B%E8%AF%95gitee%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">测试gitee自动部署</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/01/08/%E5%85%B3%E4%BA%8E%E6%8E%A5%E4%B8%8B%E6%9D%A5%E8%A6%81%E5%81%9A%E7%9A%84/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">关于接下来要做的...</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>ZhuJianJun &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/&title=《Tika一个强大的文件解析引擎》 — Hexo&pic=https://quietclickcode.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/&title=《Tika一个强大的文件解析引擎》 — Hexo&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Tika一个强大的文件解析引擎》 — Hexo&url=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/&via=https://quietclickcode.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://quietclickcode.github.io/2020/01/08/Tika%E4%B8%80%E4%B8%AA%E5%BC%BA%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E5%BC%95%E6%93%8E/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'good bye';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'welcome';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
