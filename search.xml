@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于AISearch</title>
+    <url>/2020/01/15/%E5%85%B3%E4%BA%8EAISearch/</url>
+    <content><![CDATA[<p>可以仿照百度,做网址导航</p>
+<p>做用户行为分析,搜索关键词分析,搜索时间分析</p>
+<p>后天管理需要对用户数据和内容数据进行分析</p>
+<p>从简单到复杂,不要一下整那么多东西</p>
+<p>终端:先是网页端,移动网页端,安卓端,小程序端</p>
+<p>平台:先是搜索,后台,笔记,网盘,后是,论坛,社区,商城,博客,通讯这些</p>
+<p>技术:先是前后端分离,后是spring cloud + hadoop + flutter</p>
+]]></content>
+  </entry>
+  <entry>
     <title>资料篇</title>
     <url>/2020/01/14/%E8%B5%84%E6%96%99%E7%AF%87/</url>
     <content><![CDATA[<p>树莓派(智能小车,注意不要变砖了)</p>
