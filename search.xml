@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>硬件篇</title>
+    <url>/2020/01/15/%E7%A1%AC%E4%BB%B6%E7%AF%87/</url>
+    <content><![CDATA[<p>树莓派一个,树莓派系统和ubuntu系统  远程,爬虫,硬件控制</p>
+<p>移动硬盘一个,2t,  存储</p>
+<p>服务器一个  搭建服务</p>
+<p>公网域名一个<a href="http://www.myznsh.com" target="_blank" rel="noopener">www.myznsh.com</a>  外界访问</p>
+<p>后期可能需要一个nas,</p>
+<p>一个树莓派集群 智能小车,无人机,机器人,智能家居</p>
+<p>磁盘阵列</p>
+<p>多个服务器 腾讯云</p>
+<p>多个域名,<a href="http://www.myznsh.xyz" target="_blank" rel="noopener">www.myznsh.xyz</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>关于AISearch</title>
     <url>/2020/01/15/%E5%85%B3%E4%BA%8EAISearch/</url>
     <content><![CDATA[<p>可以仿照百度,做网址导航</p>
