@@ -118,6 +118,8 @@
 <p>这个可以用来体验各种编程语言的语法</p>
 <p><a href="https://sdk.cn/datas?category_id=110130" target="_blank" rel="noopener">https://sdk.cn/datas?category_id=110130</a></p>
 <p>云开发环境</p>
+<p>hexo报错</p>
+<p>unable to access ‘<a href="https://gitee.com/myznsh/myznsh.git/&#39;" target="_blank" rel="noopener">https://gitee.com/myznsh/myznsh.git/&#39;</a>: OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to gitee.com:443<br>FATAL Something’s wrong. Maybe you can find the solution here: <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">https://hexo.io/docs/troubleshooting.html</a></p>
 ]]></content>
   </entry>
   <entry>
