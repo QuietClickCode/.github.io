@@ -121,6 +121,8 @@
 <p>hexo报错</p>
 <p>unable to access ‘<a href="https://gitee.com/myznsh/myznsh.git/&#39;" target="_blank" rel="noopener">https://gitee.com/myznsh/myznsh.git/&#39;</a>: OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to gitee.com:443</p>
 <p> docker toolbox 很多坑,tomcat都跑不起来,<br> 不适合再windows安装的软件还是不要用windows,会浪费很多时间</p>
+<p> 2020年2月1日17:59:43</p>
+<p> 博客又可以正常部署了,不晓得是什么问题造成的</p>
 ]]></content>
   </entry>
   <entry>
