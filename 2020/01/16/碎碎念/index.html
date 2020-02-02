@@ -29,7 +29,7 @@
 <meta property="og:description" content="2020年1月16日11:21:09 离人殇这首歌真心不错 2020年1月17日20:12:06这次服务器,2g升到4,40g升到80g,体验果然不一样,变快了 maven打包结合jenkins爽的一批 https:&#x2F;&#x2F;blog.csdn.net&#x2F;wangjianguo777&#x2F;article&#x2F;details&#x2F;82218619 2020年1月19日19:46:40 docker,hadoop,spr">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-16T03:21:11.000Z">
-<meta property="article:modified_time" content="2020-02-01T16:45:09.272Z">
+<meta property="article:modified_time" content="2020-02-02T04:10:55.926Z">
 <meta property="article:author" content="ZhuJianJun">
 <meta name="twitter:card" content="summary">
     
@@ -307,6 +307,16 @@
 <p> 2020年2月1日17:59:43</p>
 <p> 博客又可以正常部署了,不晓得是什么问题造成的</p>
 <p> 2020年2月2日00:42:00<br>  spring cloud 微服务部署到docker中了,但是用docker-compose还是不行,,考虑全部项目都做成微服务,这样管理好镜像就好了,<br>  这样就有好几十个微服务了,会产生很多日志文件什么的,就可以用上elk了,数据量大了就可以用hadoop,手机终端可以做一个管理平台,这样管理后台也有用了</p>
+<p>2020年2月2日11:54:02</p>
+<p>树莓派超级奇怪的问题</p>
+<p>有时开补了机器,有时插上网线可以开机,有时都不能,有时必须重启多次才能开机,<br>有时需要关机,插网线,拔卡,吹一下才能开机,有时开机没有屏幕,真的是醉了,基本上关机后,就开不了机器了</p>
+<p>插网线关机后,开机,没屏幕,但是可以连接,ip是192.168.2.109</p>
+<p>浏览器检测:<a href="http://192.168.2.109/" target="_blank" rel="noopener">http://192.168.2.109/</a><br>IPScanler扫描:<br>确定    192.168.2.110            192.168.2.110                DC:A6:32:10:CC:1A        </p>
+<p>确定    192.168.2.109            192.168.2.109                DC:A6:32:10:CC:1A        </p>
+<p>如果插网线,开不了机,一般拔卡吹一下&lt;不吹也可以),就可以开机了<br>如果不插网线,开不了机,一般拔卡吹一下&lt;不吹也可以),就可以开机了<br>重点就是必须拔一下卡才能开机,我日,什么鬼</p>
+<p>这是无线网卡的IPScanler结果<br>确定    192.168.2.109            192.168.2.109                DC:A6:32:10:CC:1B<br>开机</p>
+<p>关机    192.168.2.110            192.168.2.110                DC:A6:32:10:CC:1A<br>关机</p>
+<p>能理解吗,我尝试理解一下:就是ip都是109,但是,插网线后,就用有线网卡了,MAC地址为1A,<br>不插网线就是1B<br>直接断电可能会导致内存卡出问题,必须取下重新插,可能开机</p>
 
         </div>
 
@@ -315,7 +325,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-02-01T16:45:09.272Z" itemprop="dateUpdated">2020-02-02 00:45:09</time>
+    最后更新时间：<time datetime="2020-02-02T04:10:55.926Z" itemprop="dateUpdated">2020-02-02 12:10:55</time>
 </span><br>
 
 
