@@ -134,7 +134,13 @@
 <p>这是无线网卡的IPScanler结果<br>确定    192.168.2.109            192.168.2.109                DC:A6:32:10:CC:1B<br>开机</p>
 <p>关机    192.168.2.110            192.168.2.110                DC:A6:32:10:CC:1A<br>关机</p>
 <p>能理解吗,我尝试理解一下:就是ip都是109,但是,插网线后,就用有线网卡了,MAC地址为1A,<br>不插网线就是1B<br>直接断电可能会导致内存卡出问题,必须取下重新插,可能开机</p>
-<p>最好的解决办法就是尽量别关机,除非卡死,<br>树莓派已换成中科大 源,考虑用树莓派安装eclipse等IDE</p>
+<p>最好的解决办法就是尽量别关机,除非卡死,<br>树莓派已换成中科大 源,考虑用树莓派安装eclipse等IDE<br>eclipse安装失败了<br>树莓派既然不能按图形界面IDE,那就把vim 和emacs打造成IDE吧!</p>
+<p>2020年2月2日17:59:35</p>
+<p> docker-compose 微服务项目 在阿里云上部署成功了,docker-compose其实就是个docker批量打包部署的一个工具</p>
+<p> windows的docker toolbox有一大堆问题,比如docker-compose就用不了,</p>
+<p> ERROR: The Docker Engine version is less than the minimum required by Compose. Your current project requires a Docker Engine of version 18.02.0 or greater.</p>
+<p> 最好是不在windows上用docker</p>
+<p> 还有就是nginx的8888和微服务docker的8888 config-server服务有冲突<br> 必须停止其中的一个才可以运行</p>
 ]]></content>
   </entry>
   <entry>
