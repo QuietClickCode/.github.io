@@ -141,6 +141,7 @@
 <p> ERROR: The Docker Engine version is less than the minimum required by Compose. Your current project requires a Docker Engine of version 18.02.0 or greater.</p>
 <p> 最好是不在windows上用docker</p>
 <p> 还有就是nginx的8888和微服务docker的8888 config-server服务有冲突<br> 必须停止其中的一个才可以运行</p>
+<p> 2020年2月2日21:11:53<br> docker 在树莓派上也基本用不了,最合适用来写写代码,熟悉各种语言的语法,熟悉,vim熟悉emacs和linux命令和脚本</p>
 ]]></content>
   </entry>
   <entry>
