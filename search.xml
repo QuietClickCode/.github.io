@@ -371,6 +371,8 @@
 <p>下一步微服务系统</p>
 <p>下一步爬虫系统两个版本<br>java+mysql+es</p>
 <p>python+mongodb</p>
+<p>2020年2月4日23:09:13</p>
+<p>彻底移除代理了<br>env查看环境变量<br>unset https_proxy<br>unset http_proxy移除代理<br>/etc/profile可以配置代理</p>
 ]]></content>
   </entry>
   <entry>
