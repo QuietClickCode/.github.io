@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于技术选型和比较</title>
+    <url>/2020/02/04/%E5%85%B3%E4%BA%8E%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E5%92%8C%E6%AF%94%E8%BE%83/</url>
+    <content><![CDATA[<p>自己去实际体验然后,你就知道什么时候该选什么了</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>后端技术汇总</title>
+    <url>/2020/02/04/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>后端框架汇总</title>
+    <url>/2020/02/04/%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>UI框架大杂烩</title>
+    <url>/2020/02/04/UI%E6%A1%86%E6%9E%B6%E5%A4%A7%E6%9D%82%E7%83%A9/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>前端框架的比较</title>
+    <url>/2020/02/04/%E5%89%8D%E7%AB%AF%E6%A1%86%E6%9E%B6%E7%9A%84%E6%AF%94%E8%BE%83/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Web服务器的选择</title>
+    <url>/2020/02/04/Web%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E9%80%89%E6%8B%A9/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>操作系统的烂漫</title>
+    <url>/2020/02/04/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%83%82%E6%BC%AB/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>数据库的故事</title>
     <url>/2020/02/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%95%85%E4%BA%8B/</url>
     <content><![CDATA[<p>2020年2月4日22:12:34</p>
@@ -288,6 +324,8 @@
 <p>可以考虑的专题:</p>
 <p>开源专题:</p>
 <p>幽默笑话集锦专题:</p>
+<p>自己有一个兴趣,喜欢给自己留多个选择,喜欢对比实现同样功能的产品和技术</p>
+<p>可写自己使用之后的感受,客观的分析比较,做大之后,汇集别人的力量又可以做成一个网站,一个平台</p>
 ]]></content>
   </entry>
   <entry>
